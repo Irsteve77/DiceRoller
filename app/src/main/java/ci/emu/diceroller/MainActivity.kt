@@ -39,7 +39,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
-    var result by remember { mutableIntStateOf(1) }
+
+    var result by remember { mutableIntStateOf((1..6).random()) }
 
     val imageResource = when (result) {
         1 -> R.drawable.dice_1
